@@ -4,12 +4,12 @@ metadata:
   name: gateway-ingress
 spec:
   rules:
-    - http:
-        paths:
-        - path: /
-          pathType: Prefix
-           backend:
+    http:
+      paths:
+        - pathType: Prefix
+          path: "/"
+          backend:
             service:
-              name: hello-world
+              name: hello-kubernetes-second
               port:
                 number: 80
