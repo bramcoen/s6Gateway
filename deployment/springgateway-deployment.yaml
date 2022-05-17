@@ -24,7 +24,7 @@ spec:
         io.kompose.service: springgateway
     spec:
       containers:
-        - image: bramco/brams6frontend
+        - image: bramco/brams6gateway
           name: springgateway
           ports:
             - containerPort: 443

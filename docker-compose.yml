@@ -1,7 +1,7 @@
 version: "2"
 services:
   springgateway:
-    image: bramco/brams6frontend
+    image: bramco/brams6gateway
     hostname: frontend
     ports:
       - 443:443
