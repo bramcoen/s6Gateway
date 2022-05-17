@@ -19,7 +19,7 @@ public class S6Application {
 				route("messaging", r->  r.path("/messaging/*")
 						.uri("http://messaging"))
 				.route("rabbit", r->  r.path("/rabbit/*")
-				.uri("http://rabbit:15672"))
+				.uri("http://info.cern.ch/"))
 				.build();
 	}
 }
