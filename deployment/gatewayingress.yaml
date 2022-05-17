@@ -10,6 +10,6 @@ spec:
           path: "/"
           backend:
             service:
-              name: hello-kubernetes-second
+              name: springgateway
               port:
                 number: 80
