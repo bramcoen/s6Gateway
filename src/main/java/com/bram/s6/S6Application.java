@@ -16,10 +16,10 @@ public class S6Application {
 	@Bean
 	public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
 		return builder.routes().
-				route("messaging", r->  r.path("/messaging/*")
-						.uri("http://messaging"))
-				.route("rabbit", r->  r.path("/rabbit/*")
-				.uri("http://info.cern.ch/"))
+				route("messaging", r->  r.path("*")
+						.uri("http://info.cern.ch/"))
+				//.route("rabbit", r->  r.path("/rabbit/*")
+				//.uri("http://rabbit/"))
 				.build();
 	}
 }
