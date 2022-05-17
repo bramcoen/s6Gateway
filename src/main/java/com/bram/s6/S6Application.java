@@ -17,9 +17,9 @@ public class S6Application {
 	public RouteLocator gatewayRoutes(RouteLocatorBuilder builder){
 		return builder.routes().
 				route("messaging", r->  r.path("/messaging/*")
-						.uri("https://messaging:443"))
+						.uri("http://messaging"))
 				.route("rabbit", r->  r.path("/rabbit/*")
-				.uri("https://rabbitmq:15672"))
+				.uri("http://rabbit:15672"))
 				.build();
 	}
 }
