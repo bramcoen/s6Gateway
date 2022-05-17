@@ -1,15 +1,17 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: gateway-ingress
+  name: spring-gateway-ingress
+  annotations:
+    kubernetes.io/ingress.class: nginx
 spec:
   rules:
-    http:
-      paths:
-        - pathType: Prefix
-          path: "/"
-          backend:
-            service:
-              name: springgateway
-              port:
-                number: 80
+      http:
+        paths:
+          - pathType: Prefix
+            path: "/"
+            backend:
+              service:
+                name: springgateway
+                port:
+                  number: 80
