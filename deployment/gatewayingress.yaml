@@ -11,5 +11,7 @@ spec:
           backend:
             service:
               name: springgateway
-              port:
-                number: 80, 443
+            - port:
+                number: 80
+            - port:
+                number: 443
