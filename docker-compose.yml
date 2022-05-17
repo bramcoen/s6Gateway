@@ -4,7 +4,7 @@ services:
     labels:
       kompose.service.type: loadbalancer # need this label for Kubernetes
     image: bramco/brams6gateway
-    hostname: frontend
+    hostname: springgateway
     ports:
       - 443:443
       - 80:80
