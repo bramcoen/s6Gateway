@@ -19,7 +19,7 @@ public class S6Application {
 				route("messaging", r->  r.path("/messaging/*")
 						.uri("https://messaging:443"))
 				.route("rabbit", r->  r.path("/rabbit/*")
-				.uri("https://rabbit:15672"))
+				.uri("https://rabbitmq:15672"))
 				.build();
 	}
 }
