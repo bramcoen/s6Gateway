@@ -2,13 +2,12 @@ apiVersion: v1
 kind: Service
 metadata:
   annotations:
-    kompose.cmd: kompose convert
-    kompose.service.type: loadbalancer
+    kompose.cmd: kompose.exe convert
     kompose.version: 1.26.1 (a9d05d509)
   creationTimestamp: null
   labels:
-    io.kompose.service: springgateway-tcp
-  name: springgateway-tcp
+    io.kompose.service: springgateway
+  name: springgateway
 spec:
   ports:
     - name: "443"
@@ -22,6 +21,5 @@ spec:
       targetPort: 8080
   selector:
     io.kompose.service: springgateway
-  type: LoadBalancer
 status:
   loadBalancer: {}

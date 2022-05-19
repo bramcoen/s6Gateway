@@ -1,8 +1,6 @@
 version: "2"
 services:
   springgateway:
-    labels:
-      kompose.service.type: loadbalancer # need this label for Kubernetes
     image: bramco/brams6gateway
     hostname: springgateway
     ports:

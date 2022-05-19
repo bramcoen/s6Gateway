@@ -2,8 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   annotations:
-    kompose.cmd: kompose convert
-    kompose.service.type: loadbalancer
+    kompose.cmd: kompose.exe convert
     kompose.version: 1.26.1 (a9d05d509)
   creationTimestamp: null
   labels:
@@ -18,8 +17,7 @@ spec:
   template:
     metadata:
       annotations:
-        kompose.cmd: kompose convert
-        kompose.service.type: loadbalancer
+        kompose.cmd: kompose.exe convert
         kompose.version: 1.26.1 (a9d05d509)
       creationTimestamp: null
       labels:
