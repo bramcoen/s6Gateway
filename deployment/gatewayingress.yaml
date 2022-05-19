@@ -1,16 +1,13 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: spring-gateway-ingress
+name: spring-gateway-ingress
 spec:
-  rules:
-  - host: s6.coenders.party
-    http:
-      paths:
-      - path: /
-        pathType: Prefix
-        backend:
-          service:
-            name: springgateway
-            port:
-              number: 8080
+ rules:
+ - http:
+    paths:
+    - path: /
+      pathType: Prefix
+      backend:
+        serviceName: springgateway
+        servicePort: 8080
