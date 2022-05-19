@@ -1,7 +1,7 @@
 kind: Ingress
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: ingress-api-gateway
+  name: ingress-spring-gateway
   namespace: default
   managedFields:
     - manager: k8saasapi
@@ -37,9 +37,9 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: api-gateway
+                name: springgateway
                 port:
-                  number: 8081
+                  number: 8080
 status:
   loadBalancer:
     ingress:
