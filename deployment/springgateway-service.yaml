@@ -9,6 +9,7 @@ metadata:
     io.kompose.service: springgateway
   name: springgateway
 spec:
+  type: LoadBalancer
   ports:
     - name: "443"
       port: 443
