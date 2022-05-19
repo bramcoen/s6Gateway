@@ -4,7 +4,7 @@ metadata:
   name: spring-gateway-ingress
 spec:
   rules:
-  - host: 165.232.88.89
+  - host: s6.coenders.party
     http:
       paths:
       - path: /
@@ -13,4 +13,4 @@ spec:
           service:
             name: springgateway
             port:
-              number: 8081
+              number: 8080
