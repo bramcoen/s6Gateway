@@ -9,5 +9,7 @@ spec:
     - path: /
       pathType: Prefix
       backend:
-        serviceName: springgateway
-        servicePort: 8080
+        service:
+            name: springgateway
+            port:
+              number: 8080
