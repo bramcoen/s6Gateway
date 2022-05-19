@@ -1,0 +1,12 @@
+zuul:
+  routes:
+    user-service:
+      service-id: UserService
+      path: /users/**
+      url: "http://info.cern.ch/"
+      strip-prefix: false
+    item-service:
+      service-id: ItemService
+      path: /items/**
+      strip-prefix: false
+      url: "http://info.cern.ch/"

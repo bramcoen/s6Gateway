@@ -1,0 +1,47 @@
+# apiVersion: apps/v1
+# kind: Deployment
+# metadata:
+#   name: api-gateway
+# spec:
+#   replicas: 1
+#   selector:
+#     matchLabels:
+#       app: api-gateway
+#   template:
+#     metadata:
+#       labels:
+#         app: api-gateway
+#     spec:
+#       containers:
+#         image: hrajr25/api-gateway:v0.1
+#         imagePullPolicy: Always
+#         name: api-gateway
+#         resources:
+#           requests:
+#             memory: "256Mi"
+#           limits:
+#             memory: "512Mi"
+#         ports:
+#           - containerPort: 8081
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: api-gateway
+  name: api-gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: api-gateway
+  template:
+    metadata:
+      labels:
+        app: api-gateway
+    spec:
+      containers:
+        - image: hrajr25/api-gateway:v0.1
+          name: api-gateway
+          ports:
+            - containerPort: 8081
