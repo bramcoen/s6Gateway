@@ -19,7 +19,7 @@ public class S6Application {
 				.route("rabbit", r->  r.path("/rabbit/*")
 				.uri("http://rabbit:15672/")).
 				route("messaging", r->  r.path("/*")
-						.uri("http://frontend/"))
+						.uri("http://frontend:3000/"))
 				.build();
 	}
 }
