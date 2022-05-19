@@ -9,7 +9,7 @@ spec:
           - 
             backend: 
               service: 
-                name: rabbit
+                name: rabbitmq
                 port: 
                   number: 15672
             path: /
