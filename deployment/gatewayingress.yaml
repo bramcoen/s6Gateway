@@ -1,16 +1,16 @@
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: spring-gateway-ingress
-spec: 
-  rules: 
-    - http: 
-        paths: 
-          - 
-            backend: 
-              service: 
-                name: rabbitmq
-                port: 
-                  number: 15672
-            path: /
-            pathType: Prefix
+  name: springgateway
+spec:
+  rules:
+  - host: s6.coenders.party
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: springgateway
+            port:
+              number: 8080
