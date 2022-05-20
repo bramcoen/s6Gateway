@@ -19,7 +19,7 @@ public class ApiGatewayApplication {
         return new AddResponseHeaderFilter();
     }
 
-    @Bean
+ /*   @Bean
     public ModifyResponseBodyFilter modifyResponseHeaderFilter() {
         return new ModifyResponseBodyFilter();
     }
@@ -27,7 +27,7 @@ public class ApiGatewayApplication {
     @Bean
     public ModifyResponseDataStreamFilter modifyResponseDataStreamFilter() {
         return new ModifyResponseDataStreamFilter();
-    }
+    }*/
 
     @Bean
     public PrefixRequestEntityFilter prefixRequestEntityFilter() {
