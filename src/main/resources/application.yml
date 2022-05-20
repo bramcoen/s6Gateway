@@ -8,5 +8,5 @@ zuul:
     rabbitmq:
       service-id: rabbitmq
       path: /rabbit/**
-      strip-prefix: true
+      strip-prefix: false
       url: "http://rabbitmq:15672/"
