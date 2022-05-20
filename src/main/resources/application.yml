@@ -1,0 +1,12 @@
+zuul:
+  routes:
+    user-service:
+      service-id: UserService
+      path: /users/**
+      url: "http://userservice/"
+      strip-prefix: true
+    rabbitmq:
+      service-id: rabbitmq
+      path: /rabbit/**
+      strip-prefix: true
+      url: "http://rabbitmq:15672/"
