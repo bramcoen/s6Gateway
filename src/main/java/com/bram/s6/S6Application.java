@@ -18,7 +18,7 @@ public class S6Application {
 		return builder.routes()
 				.route("rabbit", r->  r.path("/rabbit/**")
 				.uri("http://rabbitmq:15672/")).
-				route("messaging", r->  r.path("/user/**")
+				route("userservice", r->  r.path("/**")
 						.uri("http://userservice/"))
 				.build();
 	}
