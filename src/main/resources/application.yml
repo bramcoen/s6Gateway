@@ -2,7 +2,7 @@ zuul:
   routes:
     user-service:
       service-id: UserService
-      path: /users/**
+      path: /user/**
       url: "http://userservice/"
       strip-prefix: true
     rabbitmq:
