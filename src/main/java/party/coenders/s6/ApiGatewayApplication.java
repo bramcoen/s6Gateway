@@ -13,23 +13,13 @@ import org.springframework.web.bind.annotation.CrossOrigin;
 */
 @EnableZuulProxy
 @SpringBootApplication
-@CrossOrigin(origins = "http://localhost", "https://www.coenders.party", maxAge = 3600)
+@CrossOrigin(origins = {"http://localhost", "https://www.coenders.party"}, maxAge = 3600)
 public class ApiGatewayApplication {
 
     @Bean
     public AddResponseHeaderFilter addResponseHeaderFilter() {
         return new AddResponseHeaderFilter();
     }
-
- /*   @Bean
-    public ModifyResponseBodyFilter modifyResponseHeaderFilter() {
-        return new ModifyResponseBodyFilter();
-    }
-
-    @Bean
-    public ModifyResponseDataStreamFilter modifyResponseDataStreamFilter() {
-        return new ModifyResponseDataStreamFilter();
-    }*/
 
     @Bean
     public PrefixRequestEntityFilter prefixRequestEntityFilter() {
