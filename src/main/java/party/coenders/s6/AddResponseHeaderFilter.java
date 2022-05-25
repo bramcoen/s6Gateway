@@ -4,7 +4,6 @@ import com.netflix.zuul.ZuulFilter;
 import com.netflix.zuul.context.RequestContext;
 
 import javax.servlet.http.HttpServletResponse;
-import java.util.UUID;
 
 public class AddResponseHeaderFilter extends ZuulFilter {
     public String filterType() {
@@ -21,9 +20,15 @@ public class AddResponseHeaderFilter extends ZuulFilter {
 
     public Object run() {
         RequestContext context = RequestContext.getCurrentContext();
+        if (context.getRequest().getRequestURL().toString().startsWith("http://localhost")){
         HttpServletResponse servletResponse = context.getResponse();
-        servletResponse.addHeader("X-Foo",
-                UUID.randomUUID().toString());
+            servletResponse.addHeader("Access-Control-Allow-Origin","http://localhost");
+        }
+       else if (context.getRequest().getRequestURL().toString().startsWith("https://www.coenders.party")) {
+            HttpServletResponse servletResponse = context.getResponse();
+            servletResponse.addHeader("Access-Control-Allow-Origin", "https://www.coenders.party");
+
+        }
         return null;
     }
 }
