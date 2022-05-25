@@ -28,6 +28,10 @@ public class AddResponseHeaderFilter extends ZuulFilter {
             HttpServletResponse servletResponse = context.getResponse();
             servletResponse.addHeader("Access-Control-Allow-Origin", "https://www.coenders.party");
 
+        } else if (context.getRequest().getRequestURL().toString().startsWith("http://www.coenders.party")) {
+            HttpServletResponse servletResponse = context.getResponse();
+            servletResponse.addHeader("Access-Control-Allow-Origin", "http://www.coenders.party");
+
         }
         return null;
     }
