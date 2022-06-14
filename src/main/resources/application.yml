@@ -6,7 +6,7 @@ zuul:
       url: "http://userservice/"
       strip-prefix: true
     message:
-      service-id: rabbitmq
+      service-id: message
       path: /message/**
       strip-prefix: true
       url: "http://messageservice/"
@@ -15,4 +15,3 @@ zuul:
       path: /logging/**
       strip-prefix: true
       url: "http://loggingservice/"
-
