@@ -10,3 +10,9 @@ zuul:
       path: /message/**
       strip-prefix: true
       url: "http://messageservice/"
+    logging:
+      service-id: logging
+      path: /logging/**
+      strip-prefix: true
+      url: "http://loggingservice/"
+
